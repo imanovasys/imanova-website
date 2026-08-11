@@ -1,6 +1,6 @@
 # Imanova Systems Website
 
-A Next.js (App Router, static export) rewrite of the Stitch-designed Imanova Systems site, ready to deploy to Netlify's free tier.
+A Next.js (App Router) rewrite of the Stitch-designed Imanova Systems site, built to deploy on **Vercel**.
 
 ## Pages
 
@@ -9,7 +9,7 @@ A Next.js (App Router, static export) rewrite of the Stitch-designed Imanova Sys
 - `/our-services/` — Our Services
 - `/our-approach/` — Our Approach
 - `/resources/` — Resources and Documentation
-- `/contact-us/` — Contact Us (working contact form via Netlify Forms)
+- `/contact-us/` — Contact Us (working contact form, sends email via Resend)
 
 All pages share a `Header`/`Footer` and the "Sahara" warm-minimalism theme (the Resources page was originally a different, inconsistent design and has been restyled to match).
 
@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-Visit http://localhost:3000.
+Visit http://localhost:3000. The contact form needs `RESEND_API_KEY` set (see below) to actually send email in dev — without it, submitting shows a clear "email service is not configured" error instead of failing silently.
 
 ## Build
 
@@ -28,36 +28,33 @@ Visit http://localhost:3000.
 npm run build
 ```
 
-This produces a fully static site in `out/` (`next.config.js` sets `output: 'export'`), so there is no server runtime, no serverless functions, and no cold starts — just static files. This keeps hosting comfortably within Netlify's free tier.
+This is a normal Next.js build (no static export) — the app runs on Vercel's Node runtime, which is what makes the `/api/contact` route possible.
 
-## Deploying to Netlify
+## Deploying to Vercel
 
-`netlify.toml` is already configured:
+No config file is required — Vercel auto-detects Next.js and runs `next build` with sensible defaults.
 
-```toml
-[build]
-  command = "npm run build"
-  publish = "out"
-```
+1. Push this project to a GitHub/GitLab/Bitbucket repo.
+2. In Vercel, "Add New..." → "Project" → import the repo. Framework preset "Next.js" is picked automatically.
+3. Before the first deploy (or right after, then redeploy), add the environment variable described below.
+4. Deploy. Vercel's free "Hobby" plan covers this site comfortably (it's almost entirely static pages plus one lightweight API route).
 
-Two ways to deploy:
-
-1. **Git-based (recommended):** push this project to a GitHub/GitLab/Bitbucket repo, then in Netlify choose "Add new site" → "Import an existing project" and pick the repo. Netlify will pick up `netlify.toml` automatically.
-2. **Drag and drop:** run `npm run build` locally, then drag the generated `out/` folder onto https://app.netlify.com/drop.
+Security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) are set via `next.config.js`'s `headers()`, so they apply on any host, not just Vercel.
 
 ### Contact form → info@imanovasys.com
 
-The Contact Us page uses **Netlify Forms** — no email provider, API key, or backend code required, and it works on the free tier (100 submissions/month).
+The Contact Us page posts to `app/api/contact/route.ts`, a Next.js API route that sends email through **Resend**.
 
-After the first deploy, you must do **one manual step in the Netlify dashboard** (this can't be set via code):
+Setup:
 
-1. Go to your site in Netlify → **Forms** → **Settings and usage** → **Form notifications**.
-2. Add a notification → **Email notification**.
-3. Set the "Email to notify" field to `info@imanovasys.com`.
+1. Create a free account at https://resend.com.
+2. Get an API key (Dashboard → API Keys) and add it to Vercel: Project Settings → Environment Variables → `RESEND_API_KEY`.
+3. **Sender restriction to know about**: the route currently sends `from` Resend's shared testing address (`onboarding@resend.dev`), which only reliably delivers to the email address your Resend account was signed up with. For production delivery to `info@imanovasys.com`:
+   - In Resend, go to Domains → Add Domain → add `imanovasys.com`, then add the DNS records Resend gives you (TXT/CNAME, at your domain registrar).
+   - Once verified, change `FROM_ADDRESS` in `app/api/contact/route.ts` to something like `"Imanova Systems <contact@imanovasys.com>"`.
+4. Redeploy after adding the environment variable — Vercel doesn't pick up new env vars on already-running deployments.
 
-After that, every submission from `/contact-us/` is emailed there automatically. Submissions also show up under Site → Forms in the dashboard.
-
-`public/forms.html` is a hidden, unlinked page that exists purely so Netlify's build-time bot reliably detects the form fields (a documented workaround for frameworks like Next.js where the visible form is rendered by client-side JS).
+The route also does basic server-side validation (required fields, email format) and a honeypot check (a hidden `bot-field` input humans never fill in) before sending.
 
 ## Logo
 
@@ -70,7 +67,7 @@ After that, every submission from `/contact-us/` is emailed there automatically.
 - **`app/manifest.ts`** generates a web app manifest (`manifest.webmanifest`) referencing the logo.
 - **Structured data**: `components/JsonLd.tsx` injects `Organization` and `WebSite` JSON-LD into every page (name, logo, email, Nairobi address, described services).
 - **Domain assumption**: all of the above (canonical URLs, sitemap, JSON-LD, Open Graph URLs) assume the site will live at `https://imanovasys.com` — that's a guess based on the contact email's domain, set in one place: `siteConfig.url` in `lib/site.ts`. Update it there if the real domain differs, and rebuild.
-- **No dynamic OG share image**: a branded Open Graph image (`app/opengraph-image.tsx`, using `next/og`) was built but had to be removed — a bug in the version of `@vercel/og` bundled with this Next.js release crashes at build time on Windows while loading its default font (`TypeError: Invalid URL`, a known upstream issue). Rather than ship something unverified, link previews currently fall back to text-only (title + description), which still works correctly. To add a real share image later: either confirm the bug doesn't reproduce on Netlify's Linux build and re-add the file, or generate a static PNG (e.g. 1200×630) by hand and reference it via `openGraph.images` / `twitter.images` in `app/layout.tsx`.
+- **No dynamic OG share image**: a branded Open Graph image (`app/opengraph-image.tsx`, using `next/og`) was built but had to be removed — a bug in the version of `@vercel/og` bundled with this Next.js release crashes at build time on Windows while loading its default font (`TypeError: Invalid URL`, a known upstream issue, unrelated to Vercel itself). Link previews currently fall back to text-only (title + description), which still works correctly. To add a real share image later: either verify the bug doesn't reproduce in Vercel's Linux build environment and re-add the file, or generate a static PNG (e.g. 1200×630) by hand and reference it via `openGraph.images` / `twitter.images` in `app/layout.tsx`.
 
 ## Known follow-ups
 

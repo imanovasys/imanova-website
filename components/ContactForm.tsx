@@ -15,22 +15,16 @@ const inquiryTypes = [
   "General Inquiry",
 ];
 
-function encode(data: Record<string, string>) {
-  return Object.keys(data)
-    .map(
-      (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
-    )
-    .join("&");
-}
-
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [values, setValues] = useState({
     name: "",
     email: "",
     organization: "",
     inquiry: inquiryTypes[7],
     message: "",
+    "bot-field": "",
   });
 
   const handleChange = (
@@ -44,12 +38,15 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
     try {
-      const res = await fetch("/", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...values }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
       });
-      if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || `Request failed: ${res.status}`);
+      }
       setStatus("success");
       setValues({
         name: "",
@@ -57,8 +54,12 @@ export default function ContactForm() {
         organization: "",
         inquiry: inquiryTypes[7],
         message: "",
+        "bot-field": "",
       });
     } catch (err) {
+      setErrorMessage(
+        err instanceof Error ? err.message : "Something went wrong.",
+      );
       setStatus("error");
     }
   };
@@ -83,19 +84,18 @@ export default function ContactForm() {
   }
 
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
-      className="space-y-6"
-    >
-      {/* Required for Netlify Forms static detection */}
-      <input type="hidden" name="form-name" value="contact" />
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Honeypot: hidden from real users, bots tend to fill every field */}
       <p className="hidden">
         <label>
-          Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+          Don&apos;t fill this out if you&apos;re human:{" "}
+          <input
+            name="bot-field"
+            value={values["bot-field"]}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+          />
         </label>
       </p>
 
@@ -200,8 +200,8 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="text-error font-body text-sm">
-          Something went wrong sending your message. Please try again, or
-          email us directly at{" "}
+          {errorMessage || "Something went wrong sending your message."} You
+          can also email us directly at{" "}
           <a className="underline" href="mailto:info@imanovasys.com">
             info@imanovasys.com
           </a>
