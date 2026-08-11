@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "out", "-l", "4173"],
+      "port": 4173
+    },
+    {
+      "name": "asset-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "public", "-l", "4174"],
+      "port": 4174
+    }
+  ]
+}

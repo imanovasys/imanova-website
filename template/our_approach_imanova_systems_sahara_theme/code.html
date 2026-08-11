@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Our Approach | Imanova Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Eb+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#3a302a",
+                        "on-error": "#ffffff",
+                        "outline": "#9a9088",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "on-tertiary-container": "#3a2020",
+                        "primary-container": "#e08850",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "tertiary-container": "#d47070",
+                        "inverse-on-surface": "#faf5ee",
+                        "secondary-fixed": "#eae2da",
+                        "tertiary-fixed": "#fce0e0",
+                        "on-primary-container": "#fbe8d8",
+                        "surface-container-highest": "#e6e0d6",
+                        "primary": "#c2652a",
+                        "outline-variant": "#d8d0c8",
+                        "on-secondary-fixed": "#2a2420",
+                        "primary-fixed": "#fbe8d8",
+                        "tertiary": "#8c3c3c",
+                        "surface-dim": "#dcd6cc",
+                        "error": "#c0392b",
+                        "surface-container-high": "#ece6dc",
+                        "surface-container-low": "#f6f0e8",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#eae2da",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#3a302a",
+                        "primary-fixed-dim": "#f0a878",
+                        "on-background": "#3a302a",
+                        "background": "#faf5ee",
+                        "surface": "#faf5ee",
+                        "surface-tint": "#c2652a",
+                        "inverse-primary": "#f0a878",
+                        "error-container": "#fce4e0",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#ece6dc",
+                        "on-secondary-container": "#605850",
+                        "on-primary-fixed": "#401a08",
+                        "on-error-container": "#7a1a10",
+                        "secondary-fixed-dim": "#cec6be",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2e1515",
+                        "on-surface-variant": "#605850",
+                        "surface-container": "#f2ece4",
+                        "secondary": "#78706a",
+                        "on-secondary-fixed-variant": "#504840",
+                        "surface-bright": "#faf5ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Eb Garamond", "serif"],
+                        "display": ["Eb Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .step-connector {
+            position: relative;
+        }
+        .step-connector::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background: repeating-linear-gradient(to right, #d8d0c8 0, #d8d0c8 4px, transparent 4px, transparent 8px);
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .step-connector::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+
+<header class="fixed top-0 w-full z-50 bg-surface/80 glass-header border-b border-outline-variant transition-all duration-300 py-4">
+    <nav class="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <img alt="Imanova Systems Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsqYhuK2GNFSsesairdIxGrB6eIuNe5QBTGpqHAryYgwWR83FCUEk-DVhz5y7RbVtdDzFAWn8M58WJ3OtUZnV_RgULv0G4kvwvqtlBAvOS_q-oKhAN-ioHcdQsFLRL-OyLWwWF-6FVz9mvbYujG4fUffPC7Sitay40OExK508y70_bDrbix4xlQL3ZBKlGLHdK1yX8Ytx4DtU9QUw1TTth3agH5OF4bcyLdtVrGHlDVNYO1Xs8Nvzf9NA">
+            <span class="font-display text-2xl tracking-tight text-on-surface leading-none hidden lg:block">Imanova Systems</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-8"><a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a><a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a><a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Our Services</a><a class="font-label text-sm text-primary font-bold border-b-2 border-primary pb-1" href="#">Our Approach</a><a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Resources and Documentation</a><button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label text-sm font-semibold hover:opacity-90 transition-opacity">Contact Us</button></div>
+        <button class="lg:hidden p-2">
+            <span class="material-symbols-outlined text-on-surface">menu</span>
+        </button>
+    </nav>
+</header>
+
+<main class="pt-24">
+    <!-- Hero Section -->
+    <section class="px-6 md:px-12 py-20 max-w-7xl mx-auto">
+        <div class="max-w-4xl">
+            <div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20 mb-8">
+                <span class="material-symbols-outlined text-[18px]">biotech</span>
+                <span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Scientific Methodology</span>
+            </div>
+            <h1 class="font-display text-5xl lg:text-7xl leading-[1.1] tracking-tight text-on-surface mb-8 transition-all duration-700 opacity-100 translate-y-0">Co-create solutions that grow with your <span class="text-primary italic">health system</span></h1>
+            <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl transition-all duration-700 opacity-100 translate-y-0">We believe the most successful digital health systems are developed through collaboration—not imposed through technology. Every project follows a structured, iterative process that ensures solutions remain responsive to local priorities while supporting future growth.</p>
+        </div>
+    </section>
+
+    <!-- The Methodology Diagram / Infographic Section -->
+    <section class="bg-surface-container-low py-24 border-y border-outline-variant overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-display text-4xl lg:text-5xl text-on-surface mb-6">The Co-creation Process</h2>
+                <p class="font-body text-on-surface-variant max-w-2xl mx-auto transition-all duration-700 opacity-100 translate-y-0">Our six-stage lifecycle ensures that every health system we build is technically sound, locally owned, and sustainably operated.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-8 relative"><!-- Step 1: Understand the Need -->
+<div class="relative z-10 flex flex-col items-center text-center group step-connector last:after:hidden transition-all duration-700 opacity-100 translate-y-0">
+    <div class="w-16 h-16 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl">search</span>
+    </div>
+    <h3 class="font-display text-xl mb-3 text-on-surface">1. Understand the Need</h3>
+    <p class="text-sm text-on-surface-variant px-2 transition-all duration-700 opacity-100 translate-y-0">We work closely with stakeholders to conduct comprehensive needs assessments, evaluate existing systems, and define opportunities for improvement.</p>
+</div>
+<!-- Step 2: Co-design the Solution -->
+<div class="relative z-10 flex flex-col items-center text-center group step-connector last:after:hidden transition-all duration-700 opacity-100 translate-y-0">
+    <div class="w-16 h-16 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl">draw</span>
+    </div>
+    <h3 class="font-display text-xl mb-3 text-on-surface">2. Co-design the Solution</h3>
+    <p class="text-sm text-on-surface-variant px-2 transition-all duration-700 opacity-100 translate-y-0">Together with our clients, we iteratively design solutions that align with programme objectives, user workflows, and policy requirements.</p>
+</div>
+<!-- Step 3: Build with Purpose -->
+<div class="relative z-10 flex flex-col items-center text-center group step-connector last:after:hidden transition-all duration-700 opacity-100 translate-y-0">
+    <div class="w-16 h-16 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl">construction</span>
+    </div>
+    <h3 class="font-display text-xl mb-3 text-on-surface">3. Build with Purpose</h3>
+    <p class="text-sm text-on-surface-variant px-2 transition-all duration-700 opacity-100 translate-y-0">Using modern, scalable technologies, we develop interoperable systems that prioritize usability, security, and long-term sustainability.</p>
+</div>
+<!-- Step 4: Optimize for Growth -->
+<div class="relative z-10 flex flex-col items-center text-center group step-connector last:after:hidden transition-all duration-700 opacity-100 translate-y-0">
+    <div class="w-16 h-16 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl">auto_graph</span>
+    </div>
+    <h3 class="font-display text-xl mb-3 text-on-surface">4. Optimize for Growth</h3>
+    <p class="text-sm text-on-surface-variant px-2 transition-all duration-700 opacity-100 translate-y-0">We continuously refine and enhance solutions to meet changing priorities, accommodate future expansion, and maintain high performance.</p>
+</div>
+<!-- Step 5: Build Local Capacity -->
+<div class="relative z-10 flex flex-col items-center text-center group step-connector last:after:hidden transition-all duration-700 opacity-100 translate-y-0">
+    <div class="w-16 h-16 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl">school</span>
+    </div>
+    <h3 class="font-display text-xl mb-3 text-on-surface">5. Build Local Capacity</h3>
+    <p class="text-sm text-on-surface-variant px-2 transition-all duration-700 opacity-100 translate-y-0">We provide practical training and mentorship to promote local ownership and ensure the technology succeeds through empowered people.</p>
+</div>
+<!-- Step 6: Transition & Support -->
+<div class="relative z-10 flex flex-col items-center text-center group last:after:hidden transition-all duration-700 opacity-100 translate-y-0">
+    <div class="w-16 h-16 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl">handshake</span>
+    </div>
+    <h3 class="font-display text-xl mb-3 text-on-surface">6. Transition &amp; Support</h3>
+    <p class="text-sm text-on-surface-variant px-2 transition-all duration-700 opacity-100 translate-y-0">We support smooth handover and provide ongoing technical assistance to ensure systems continue delivering value well into the future.</p>
+</div></div>
+        </div>
+    </section>
+
+    <!-- Scientific Rigor Section -->
+    <section class="py-32 px-6 md:px-12 bg-surface-bright">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="order-2 lg:order-1 transition-all duration-700 opacity-100 translate-y-0">
+                <div class="relative">
+                    <img class="rounded-2xl shadow-xl w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQ5UfQIHk9HfJ-AIkOfKtHt_4aTpoGxaXZ9iL54ut5wT3wewNfnu4UDbJjHeQBA2FkQvtSSyHCRJJ4MbBl5F_hJF4m6VfPKQ18ZTZUd-S_POtefzzC6H4xQBJ5LAdeOj-99rwzCpGtZeOZWRKgcLuzOC_kbN1HPHFxJXv_uN0B1P8D82jT6aTmkYP7CP0QHCuyFBBQ9DitbKecfqdtGJsbf-a_gw7_t36_KNjgiyOOyAii7DD6lWDXRXo7R0xfGW-1qjIfv7Siw" alt="Health Data Analysis">
+                    <div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl text-on-primary max-w-xs hidden md:block">
+                        <p class="font-display text-2xl italic leading-tight transition-all duration-700 opacity-100 translate-y-0">"Rigor is not just a process; it's our promise to the African health sector."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-8 order-1 lg:order-2 transition-all duration-700 opacity-100 translate-y-0">
+                <h2 class="font-display text-4xl lg:text-5xl text-on-surface">Scientific Rigor as Standard</h2>
+                <p class="font-body text-lg text-on-surface-variant leading-relaxed transition-all duration-700 opacity-100 translate-y-0">
+                    Our engineering is guided by the same peer-reviewed standards found in clinical research. We don't just build features; we build evidence-based tools that improve diagnostic accuracy and public health surveillance.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                        <div>
+                            <h4 class="font-bold text-on-surface">Data Sovereignty</h4>
+                            <p class="text-on-surface-variant text-sm mt-1 transition-all duration-700 opacity-100 translate-y-0">Ensuring that African health data remains under the jurisdiction and control of African institutions.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">analytics</span>
+                        <div>
+                            <h4 class="font-bold text-on-surface">Predictive Accuracy</h4>
+                            <p class="text-on-surface-variant text-sm mt-1 transition-all duration-700 opacity-100 translate-y-0">Using advanced epidemiological modeling to turn raw registry data into actionable health forecasts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Ownership Section -->
+    <section class="py-32 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto bg-primary-container rounded-3xl p-12 md:p-20 relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="space-y-8 transition-all duration-700 opacity-100 translate-y-0">
+                    <h2 class="font-display text-4xl lg:text-5xl text-on-primary-container">Local Ownership, Global Standards</h2>
+                    <p class="font-body text-lg text-on-primary-container/80 leading-relaxed transition-all duration-700 opacity-100 translate-y-0">
+                        Sustainable technology requires more than just code. We prioritize the transfer of technical expertise to local engineering teams, ensuring that systems can be independently maintained for decades.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 pt-4">
+                        <div class="bg-surface-container-lowest/20 backdrop-blur-sm p-6 rounded-xl border border-white/10 transition-all duration-700 opacity-100 translate-y-0">
+                            <p class="font-display text-4xl font-bold text-on-primary-container mb-2 transition-all duration-700 opacity-100 translate-y-0">100%</p>
+                            <p class="font-label text-[10px] uppercase tracking-widest text-on-primary-container transition-all duration-700 opacity-100 translate-y-0">African-Led Engineering</p>
+                        </div>
+                        <div class="bg-surface-container-lowest/20 backdrop-blur-sm p-6 rounded-xl border border-white/10 transition-all duration-700 opacity-100 translate-y-0">
+                            <p class="font-display text-4xl font-bold text-on-primary-container mb-2 transition-all duration-700 opacity-100 translate-y-0">24/7</p>
+                            <p class="font-label text-[10px] uppercase tracking-widest text-on-primary-container transition-all duration-700 opacity-100 translate-y-0">Regional Support Hubs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative transition-all duration-700 opacity-100 translate-y-0">
+                    <div class="aspect-square bg-on-primary-container/5 rounded-full flex items-center justify-center p-12 border border-on-primary-container/10">
+                        <div class="text-center">
+                            <span class="material-symbols-outlined text-[120px] text-on-primary-container/40">public_off</span>
+                            <p class="font-label text-sm mt-6 text-on-primary-container font-semibold transition-all duration-700 opacity-100 translate-y-0">Zero External Dependencies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="px-6 md:px-12 py-32">
+        <div class="max-w-3xl mx-auto text-center space-y-10">
+            <h2 class="font-display text-4xl md:text-6xl text-on-surface">Let's co-create the future of health.</h2>
+            <p class="font-body text-lg text-on-surface-variant transition-all duration-700 opacity-100 translate-y-0">Whether you are a government agency, a research institution, or a health NGO, our methodology is designed to adapt to your unique challenges.</p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center pt-4">
+                <button class="bg-primary text-on-primary px-12 py-5 rounded-lg font-label font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                    Discuss Your Project
+                </button>
+                <button class="bg-transparent border border-outline text-on-surface px-12 py-5 rounded-lg font-label font-bold hover:bg-surface-container-low transition-colors">
+                    View Our Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+            <div class="col-span-1 md:col-span-1 lg:col-span-2 space-y-8 transition-all duration-700 opacity-100 translate-y-0">
+                <div class="flex items-center gap-3">
+                    <img alt="Imanova Logo" class="h-8 w-auto grayscale brightness-50" src="https://lh3.googleusercontent.com/aida/AP1WRLsqYhuK2GNFSsesairdIxGrB6eIuNe5QBTGpqHAryYgwWR83FCUEk-DVhz5y7RbVtdDzFAWn8M58WJ3OtUZnV_RgULv0G4kvwvqtlBAvOS_q-oKhAN-ioHcdQsFLRL-OyLWwWF-6FVz9mvbYujG4fUffPC7Sitay40OExK508y70_bDrbix4xlQL3ZBKlGLHdK1yX8Ytx4DtU9QUw1TTth3agH5OF4bcyLdtVrGHlDVNYO1Xs8Nvzf9NA">
+                    <span class="font-display text-2xl font-bold text-on-surface">Imanova Systems Ltd</span>
+                </div>
+                <p class="font-body text-on-surface-variant max-w-sm leading-relaxed transition-all duration-700 opacity-100 translate-y-0">
+                    Global health engineering for African resilience. Headquartered in Nairobi, Kenya, bridging the gap between policy and technology.
+                </p>
+                <div class="flex gap-5">
+                    <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+                    <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+                    <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+                </div>
+            </div>
+            <div class="space-y-8 transition-all duration-700 opacity-100 translate-y-0">
+                <p class="font-label text-[11px] uppercase font-bold tracking-[0.2em] text-on-surface transition-all duration-700 opacity-100 translate-y-0">Our Solutions</p>
+                <ul class="space-y-4 font-body text-sm text-on-surface-variant"><li class=""><a class="hover:text-primary transition-colors" href="#">Health Systems Audit</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Custom Health Information Systems</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">DHIS2 Integration &amp; Interoperability</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Data Collection Platforms</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Data Analytics &amp; Visualization</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Health Research &amp; Statistical Support</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Capacity Building</a></li></ul>
+            </div>
+            <div class="space-y-8 transition-all duration-700 opacity-100 translate-y-0">
+                <p class="font-label text-[11px] uppercase font-bold tracking-[0.2em] text-on-surface transition-all duration-700 opacity-100 translate-y-0">Company</p>
+                <ul class="space-y-4 font-body text-sm text-on-surface-variant">
+                    <li class=""><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors" href="#">Nairobi Hub</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors" href="#">Privacy &amp; Governance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-12 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="font-label text-[11px] text-on-surface-variant/70 uppercase tracking-widest font-medium transition-all duration-700 opacity-100 translate-y-0">© 2026 Imanova Systems Ltd. Precise. Resilient. Authoritative.</p>
+            <div class="flex gap-10">
+                <a class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors font-bold" href="#">LinkedIn</a>
+                <a class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors font-bold" href="#">GitHub</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll interaction for header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('py-2', 'shadow-sm', 'bg-surface/95');
+            header.classList.remove('py-4', 'bg-surface/80');
+        } else {
+            header.classList.remove('py-2', 'shadow-sm', 'bg-surface/95');
+            header.classList.add('py-4', 'bg-surface/80');
+        }
+    });
+
+    // Reveal animations
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.step-connector, .grid > div, h1, p').forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
+
+
+
+
+
+
+
+</body></html>

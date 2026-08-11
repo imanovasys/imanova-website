@@ -1,0 +1,219 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Resources &amp; Documentation | Pan-African Health Consultancy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#783200",
+                    "on-secondary-container": "#00714d",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary-container": "#d95f00",
+                    "on-surface": "#0b1c30",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary-container": "#7c839b",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#131b2e",
+                    "on-secondary-fixed": "#002113",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "secondary-container": "#6cf8bb",
+                    "on-primary-fixed": "#131b2e",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary-container": "#341100",
+                    "inverse-primary": "#bec6e0",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#cbdbf5",
+                    "background": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "outline": "#76777d",
+                    "on-tertiary-fixed": "#341100",
+                    "secondary": "#006c49",
+                    "surface": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "on-background": "#0b1c30",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-container-high": "#dce9ff",
+                    "inverse-surface": "#213145",
+                    "tertiary": "#000000",
+                    "primary": "#000000",
+                    "on-surface-variant": "#45464d",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "secondary-fixed": "#6ffbbe",
+                    "tertiary-fixed": "#ffdbca"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "margin-desktop": "40px",
+                    "stack-md": "16px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Geist"],
+                    "display-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Geist"],
+                    "mono": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .sidebar-item-active {
+            @apply border-l-2 border-primary text-primary font-semibold pl-4;
+        }
+        .code-block {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 glass-nav border-b border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop py-stack-md max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-md">
+<img alt="Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQd00RoK2orAkjVgLaa49DprYWvqvNtCkyXPWwudOzKot2sxMoXglXUmWOF1Kd6YZnemiO10xN8nUb-5hLRBFtCBq4oUpvHbt-WcKAAgOrNHsT3EqC5_EziCMZzvRDATdNWXe4inetIoBnh36YwGEsulEqOtRJRXpVA9mdryMbuYcn01oAQVzl18vwCFlLciT5t2kxH0SKpRGbTSgNDDLAlWxUMFvOXoql9DyB2erluMsHM85eKQriRsOzRwejzmC0FsNC2wNEMQ">
+<span class="font-display-lg text-display-lg tracking-tighter text-on-surface">Imanova Systems</span>
+</div>
+<div class="hidden md:flex items-center space-x-gutter"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Our Services</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Our Approach</a><a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Resources and Documentation</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Contact Us</a></div>
+
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-[280px_1fr] gap-gutter">
+<!-- Technical Sidebar Navigation -->
+<aside class="hidden md:block sticky top-32 h-[calc(100vh-160px)] overflow-y-auto border-r border-outline-variant pr-gutter"><div class="space-y-stack-lg"><section><h3 class="font-label-sm text-label-sm text-outline uppercase tracking-widest mb-stack-md">Resources</h3><ul class="space-y-stack-sm"><li class=""><a class="block py-1 font-label-md text-on-surface hover:text-primary transition-colors" href="#blogs">Blogs &amp; Insights</a></li><li class=""><a class="block py-1 font-label-md text-on-surface hover:text-primary transition-colors" href="#research">Research &amp; Publications</a></li><li class=""><a class="block py-1 font-label-md text-on-surface hover:text-primary transition-colors" href="#case-studies">Case Studies</a></li><li class=""><a class="block py-1 font-label-md text-on-surface hover:text-primary transition-colors" href="#learning-center">Learning Center</a></li></ul></section></div></aside>
+<!-- Content Canvas -->
+<div class="space-y-section-gap pb-section-gap"><section class="space-y-stack-lg" id="blogs"><h2 class="font-headline-md text-headline-md border-b border-outline-variant pb-stack-sm">Blogs &amp; Insights</h2><div class="p-stack-lg bg-surface-container rounded-xl text-on-surface-variant font-body-md">Under development, please check back later.</div></section><section class="space-y-stack-lg" id="research"><h2 class="font-headline-md text-headline-md border-b border-outline-variant pb-stack-sm">Research &amp; Publications</h2><div class="p-stack-lg bg-surface-container rounded-xl text-on-surface-variant font-body-md">Coming soon.</div></section><section class="space-y-stack-lg" id="case-studies"><h2 class="font-headline-md text-headline-md border-b border-outline-variant pb-stack-sm">Case Studies</h2><div class="p-stack-lg bg-surface-container rounded-xl text-on-surface-variant font-body-md">Under development, please check back later.</div></section><section class="space-y-stack-lg" id="learning-center"><h2 class="font-headline-md text-headline-md border-b border-outline-variant pb-stack-sm">Learning Center</h2><div class="p-stack-lg bg-surface-container rounded-xl text-on-surface-variant font-body-md">Coming soon.</div></section></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-stack-md mb-stack-md">
+<img alt="Logo" class="h-6 w-auto grayscale opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQd00RoK2orAkjVgLaa49DprYWvqvNtCkyXPWwudOzKot2sxMoXglXUmWOF1Kd6YZnemiO10xN8nUb-5hLRBFtCBq4oUpvHbt-WcKAAgOrNHsT3EqC5_EziCMZzvRDATdNWXe4inetIoBnh36YwGEsulEqOtRJRXpVA9mdryMbuYcn01oAQVzl18vwCFlLciT5t2kxH0SKpRGbTSgNDDLAlWxUMFvOXoql9DyB2erluMsHM85eKQriRsOzRwejzmC0FsNC2wNEMQ">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Imanova Systems</h4>
+</div>
+<p class="text-on-surface-variant font-body-md max-w-sm mb-stack-lg">
+                    Advancing African health infrastructure through scientific rigor and precise data engineering.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Imanova Systems. Precise. Resilient. Authoritative.</p>
+</div>
+<div class="">
+<h5 class="font-label-sm text-outline uppercase tracking-widest mb-stack-lg">Our Solutions</h5>
+<ul class="space-y-stack-sm">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Health Systems Audit</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Custom Health Information Systems</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">DHIS2 Integration &amp; Interoperability</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Data Collection Platforms</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Data Analytics &amp; Visualization</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Health Research &amp; Statistical Support</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Capacity Building</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-sm text-outline uppercase tracking-widest mb-stack-lg">Legal</h5>
+<ul class="space-y-stack-sm">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for the nav bar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+                nav.classList.add('py-stack-sm');
+                nav.classList.remove('py-stack-md');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.remove('py-stack-sm');
+                nav.classList.add('py-stack-md');
+            }
+        });
+
+        // Intersection Observer for sidebar highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('aside a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold', 'border-l-2', 'border-primary', 'pl-2');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-primary', 'font-bold', 'border-l-2', 'border-primary', 'pl-2');
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Eb+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#3a302a",
+                        "on-error": "#ffffff",
+                        "outline": "#9a9088",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "on-tertiary-container": "#3a2020",
+                        "primary-container": "#e08850",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "tertiary-container": "#d47070",
+                        "inverse-on-surface": "#faf5ee",
+                        "secondary-fixed": "#eae2da",
+                        "tertiary-fixed": "#fce0e0",
+                        "on-primary-container": "#fbe8d8",
+                        "surface-container-highest": "#e6e0d6",
+                        "primary": "#c2652a",
+                        "outline-variant": "#d8d0c8",
+                        "on-secondary-fixed": "#2a2420",
+                        "primary-fixed": "#fbe8d8",
+                        "tertiary": "#8c3c3c",
+                        "surface-dim": "#dcd6cc",
+                        "error": "#c0392b",
+                        "surface-container-high": "#ece6dc",
+                        "surface-container-low": "#f6f0e8",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#eae2da",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#3a302a",
+                        "primary-fixed-dim": "#f0a878",
+                        "on-background": "#3a302a",
+                        "background": "#faf5ee",
+                        "surface": "#faf5ee",
+                        "surface-tint": "#c2652a",
+                        "inverse-primary": "#f0a878",
+                        "error-container": "#fce4e0",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#ece6dc",
+                        "on-secondary-container": "#605850",
+                        "on-primary-fixed": "#401a08",
+                        "on-error-container": "#7a1a10",
+                        "secondary-fixed-dim": "#cec6be",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2e1515",
+                        "on-surface-variant": "#605850",
+                        "surface-container": "#f2ece4",
+                        "secondary": "#78706a",
+                        "on-secondary-fixed-variant": "#504840",
+                        "surface-bright": "#faf5ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Eb Garamond", "serif"],
+                        "display": ["Eb Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 glass-header border-b border-outline-variant transition-all duration-300 py-4">
+<nav class="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Imanova Systems Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsqYhuK2GNFSsesairdIxGrB6eIuNe5QBTGpqHAryYgwWR83FCUEk-DVhz5y7RbVtdDzFAWn8M58WJ3OtUZnV_RgULv0G4kvwvqtlBAvOS_q-oKhAN-ioHcdQsFLRL-OyLWwWF-6FVz9mvbYujG4fUffPC7Sitay40OExK508y70_bDrbix4xlQL3ZBKlGLHdK1yX8Ytx4DtU9QUw1TTth3agH5OF4bcyLdtVrGHlDVNYO1Xs8Nvzf9NA">
+<span class="font-display text-2xl tracking-tight text-on-surface leading-none hidden lg:block">Imanova Systems</span>
+</div>
+<div class="hidden lg:flex items-center gap-8"><a class="font-label text-sm text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Our Services</a>
+<a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Our Approach</a>
+<a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Resources and Documentation</a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label text-sm font-semibold hover:opacity-90 transition-opacity">
+                    Contact Us
+                </button></div>
+<button class="lg:hidden p-2">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative overflow-hidden px-6 md:px-12 py-20 max-w-7xl mx-auto min-h-[80vh] flex items-center">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+<div class="space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+<div class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Sustainable Health Tech</span>
+</div>
+<h1 class="font-display text-5xl lg:text-7xl leading-[1.05] tracking-tight text-on-surface">
+                        Co-creating sustainable, <span class="text-primary italic">resilient health systems</span> for Africa.
+                    </h1>
+<p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        Improve health outcomes through scientifically rigorous, interoperable and user-centered digital health solutions designed with governments, researchers and partners.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-label text-sm font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-primary/20">
+                            Partner With Us
+                        </button>
+<button class="border-2 border-outline text-on-surface px-10 py-4 rounded-lg font-label text-sm font-bold hover:bg-surface-container transition-colors">
+                            Our Solutions
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:block animate-in fade-in zoom-in duration-1000">
+<div class="rounded-2xl overflow-hidden border border-outline-variant shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] bg-surface-container-lowest p-5 relative z-10">
+<img class="w-full aspect-[4/5] object-cover rounded-xl" data-alt="Collaborative technical workshop in Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQ5UfQIHk9HfJ-AIkOfKtHt_4aTpoGxaXZ9iL54ut5wT3wewNfnu4UDbJjHeQBA2FkQvtSSyHCRJJ4MbBl5F_hJF4m6VfPKQ18ZTZUd-S_POtefzzC6H4xQBJ5LAdeOj-99rwzCpGtZeOZWRKgcLuzOC_kbN1HPHFxJXv_uN0B1P8D82jT6aTmkYP7CP0QHCuyFBBQ9DitbKecfqdtGJsbf-a_gw7_t36_KNjgiyOOyAii7DD6lWDXRXo7R0xfGW-1qjIfv7Siw">
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Trust Metrics -->
+<section class="bg-surface-container-low py-20 border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<p class="font-display text-5xl text-primary font-bold">30+</p>
+<p class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest font-semibold">Countries Reached</p>
+</div>
+<div class="space-y-2">
+<p class="font-display text-5xl text-primary font-bold">15+</p>
+<p class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest font-semibold">Years of Expertise</p>
+</div>
+<div class="space-y-2">
+<p class="font-display text-5xl text-primary font-bold">120+</p>
+<p class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest font-semibold">Publications</p>
+</div>
+<div class="space-y-2">
+<p class="font-display text-5xl text-primary font-bold">50+</p>
+<p class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest font-semibold">Active Systems</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Philosophy -->
+<section class="bg-surface-bright py-32 px-6 md:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-24">
+<h2 class="font-display text-4xl lg:text-5xl mb-6 text-on-surface">A Foundation of Scientific Rigor</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">We don't just build software; we architect the future of health equity across the continent through three core pillars of resilience.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group p-12 border border-outline-variant rounded-2xl bg-surface-container-lowest hover:border-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 duration-700 opacity-100 translate-y-0">
+<div class="w-16 h-16 bg-primary-fixed text-primary flex items-center justify-center rounded-2xl mb-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">eco</span>
+</div>
+<h4 class="font-display text-2xl mb-5 text-on-surface">Sustainability</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Ensuring long-term viability through local capacity building, Nairobi-based engineering excellence, and sovereign data ownership.
+                        </p>
+</div>
+<div class="group p-12 border border-outline-variant rounded-2xl bg-surface-container-lowest hover:border-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 duration-700 opacity-100 translate-y-0">
+<div class="w-16 h-16 bg-secondary-container text-secondary flex items-center justify-center rounded-2xl mb-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">sync_alt</span>
+</div>
+<h4 class="font-display text-2xl mb-5 text-on-surface">Interoperability</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Bridging health data silos using international standards (HL7 FHIR) to enable seamless information flow between regional and national levels.
+                        </p>
+</div>
+<div class="group p-12 border border-outline-variant rounded-2xl bg-surface-container-lowest hover:border-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 duration-700 opacity-100 translate-y-0">
+<div class="w-16 h-16 bg-tertiary-fixed text-tertiary flex items-center justify-center rounded-2xl mb-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">expand</span>
+</div>
+<h4 class="font-display text-2xl mb-5 text-on-surface">Scalability</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Solutions designed to grow from pilot phases to national population-scale systems without technical or operational bottlenecks.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 md:px-12 py-32 bg-surface">
+<div class="max-w-7xl mx-auto bg-on-surface text-surface-bright rounded-3xl p-12 md:p-28 relative overflow-hidden text-center shadow-[0_48px_100px_rgba(0,0,0,0.2)]">
+<div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay">
+<img class="w-full h-full object-cover" data-alt="Technical map network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_DF6Ecj7cnH6GP1uGGapO-iUKTBOr-5oYopyucukXlOUg3oXrKv2YpU748t0yDJEFPq18PT0KUxuSlRAPJ3GW_SSsFsiwNAXyPCs0uLwjtvxGvpqdNysb83eRAeCyUz_sVpu2TNKmPJqnUdSouFdpv3ZJAHfgjp6jkpK6gaN1zKEyv9Xw1_ERljf9vrWz_ASMfh70l_fNdtatK840TYuQtuDD2LGEwoxceL45QOngwtJ5M_PYjcNR4vaatDa0KFrVGCNn3GerOA">
+</div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-10">
+<h2 class="font-display text-4xl md:text-6xl leading-[1.1]">Ready to build resilient health systems?</h2>
+<p class="font-body text-lg opacity-80 leading-relaxed max-w-lg mx-auto">Join Imanova Systems in pioneering digital transformation that puts African health data back into African hands.</p>
+<div class="pt-4 flex flex-col sm:flex-row gap-5 justify-center">
+<button class="bg-primary text-on-primary px-12 py-5 rounded-lg font-label font-bold hover:scale-105 transition-transform">
+                            Contact Our Experts
+                        </button>
+<button class="bg-transparent border border-surface-bright/30 text-surface-bright px-12 py-5 rounded-lg font-label font-bold hover:bg-surface-bright/10 transition-colors">
+                            Technical Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+<div class="col-span-1 md:col-span-1 lg:col-span-2 space-y-8">
+<div class="flex items-center gap-3">
+<img alt="Imanova Logo" class="h-8 w-auto grayscale brightness-50" src="https://lh3.googleusercontent.com/aida/AP1WRLsqYhuK2GNFSsesairdIxGrB6eIuNe5QBTGpqHAryYgwWR83FCUEk-DVhz5y7RbVtdDzFAWn8M58WJ3OtUZnV_RgULv0G4kvwvqtlBAvOS_q-oKhAN-ioHcdQsFLRL-OyLWwWF-6FVz9mvbYujG4fUffPC7Sitay40OExK508y70_bDrbix4xlQL3ZBKlGLHdK1yX8Ytx4DtU9QUw1TTth3agH5OF4bcyLdtVrGHlDVNYO1Xs8Nvzf9NA">
+<span class="font-display text-2xl font-bold text-on-surface">Imanova Systems Ltd</span>
+</div>
+<p class="font-body text-on-surface-variant max-w-sm leading-relaxed"><span style="color: rgba(96, 88, 80, 0.7); font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase;" class="">cO-CREATING RESILIENT HEALTH SYSTEMS IN AFRICA.</span></p>
+<div class="flex gap-5">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-8">
+<p class="font-label text-[11px] uppercase font-bold tracking-[0.2em] text-on-surface">Our Solutions</p>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant"><li class=""><a class="hover:text-primary transition-colors" href="#">Health Systems Audit</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Custom Health Information Systems</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">DHIS2 Integration &amp; Interoperability</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Data Collection Platforms</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Data Analytics &amp; Visualization</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Health Research &amp; Statistical Support</a></li><li class=""><a class="hover:text-primary transition-colors" href="#">Capacity Building</a></li></ul>
+</div>
+<div class="space-y-8">
+<p class="font-label text-[11px] uppercase font-bold tracking-[0.2em] text-on-surface">Company</p>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
+<li class="">About Us</li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Privacy &amp; Governance</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label text-[11px] text-on-surface-variant/70 uppercase tracking-widest font-medium">© 2026 Imanova Systems Ltd cOCREATING RESILIENT HEALTH SYSTEMS IN AFRICA.</p>
+<div class="flex gap-10">
+<a class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors font-bold" href="#">LinkedIn</a>
+<a class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors font-bold" href="#">GitHub</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2', 'shadow-sm', 'bg-surface/95');
+                header.classList.remove('py-4', 'bg-surface/80');
+            } else {
+                header.classList.remove('py-2', 'shadow-sm', 'bg-surface/95');
+                header.classList.add('py-4', 'bg-surface/80');
+            }
+        });
+
+        // Basic reveal animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.group').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>

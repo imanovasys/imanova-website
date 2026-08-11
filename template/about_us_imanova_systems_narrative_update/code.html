@@ -1,0 +1,478 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Eb+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-surface": "#3a302a",
+                            "on-error": "#ffffff",
+                            "outline": "#9a9088",
+                            "tertiary-fixed-dim": "#e8a0a0",
+                            "on-tertiary-container": "#3a2020",
+                            "primary-container": "#e08850",
+                            "on-tertiary-fixed-variant": "#6e3030",
+                            "tertiary-container": "#d47070",
+                            "inverse-on-surface": "#faf5ee",
+                            "secondary-fixed": "#eae2da",
+                            "tertiary-fixed": "#fce0e0",
+                            "on-primary-container": "#fbe8d8",
+                            "surface-container-highest": "#e6e0d6",
+                            "primary": "#c2652a",
+                            "outline-variant": "#d8d0c8",
+                            "on-secondary-fixed": "#2a2420",
+                            "primary-fixed": "#fbe8d8",
+                            "tertiary": "#8c3c3c",
+                            "surface-dim": "#dcd6cc",
+                            "error": "#c0392b",
+                            "surface-container-high": "#ece6dc",
+                            "surface-container-low": "#f6f0e8",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-container": "#eae2da",
+                            "on-tertiary": "#ffffff",
+                            "inverse-surface": "#3a302a",
+                            "primary-fixed-dim": "#f0a878",
+                            "on-background": "#3a302a",
+                            "background": "#faf5ee",
+                            "surface": "#faf5ee",
+                            "surface-tint": "#c2652a",
+                            "inverse-primary": "#f0a878",
+                            "error-container": "#fce4e0",
+                            "on-primary-fixed-variant": "#8a4518",
+                            "on-primary": "#ffffff",
+                            "surface-variant": "#ece6dc",
+                            "on-secondary-container": "#605850",
+                            "on-primary-fixed": "#401a08",
+                            "on-error-container": "#7a1a10",
+                            "secondary-fixed-dim": "#cec6be",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary-fixed": "#2e1515",
+                            "on-surface-variant": "#605850",
+                            "surface-container": "#f2ece4",
+                            "secondary": "#78706a",
+                            "on-secondary-fixed-variant": "#504840",
+                            "surface-bright": "#faf5ee"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "fontFamily": {
+                            "headline": ["Eb Garamond", "serif"],
+                            "display": ["Eb Garamond", "serif"],
+                            "body": ["Manrope", "sans-serif"],
+                            "label": ["Manrope", "sans-serif"]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    }catch(_e){}</script></head><body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 glass-header border-b border-outline-variant transition-all duration-300 py-4">
+        <nav class="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img alt="Imanova Systems Logo" class="h-10 w-auto" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiIGZpbGw9IiNlOGVhZWQiLz48cGF0aCBkPSJNMTcwIDEzMCBsMzAgNDAgbDIwLTE1IGw0MCA1NSBIMTQweiIgZmlsbD0iI2JkYzFjNiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEyMCIgcj0iMTgiIGZpbGw9IiNiZGMxYzYiLz48L3N2Zz4=">
+                <span class="font-display text-2xl tracking-tight text-on-surface leading-none hidden lg:block">Imanova Systems</span>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+                <a class="font-label text-sm text-primary font-bold border-b-2 border-primary pb-1" href="#">About Us</a>
+                <a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Our Services</a>
+                <a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Our Approach</a>
+                <a class="font-label text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Resources and Documentation</a>
+                <button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label text-sm font-semibold hover:opacity-90 transition-opacity">Contact Us</button>
+            </div>
+            <button class="lg:hidden p-2">
+                <span class="material-symbols-outlined text-on-surface">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center pt-24 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="African health systems data visualization" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCunR_ChV9_64P57MMFcGsWJVO4CFPXCEc1udiHAu4VTulg_c1JBpMym0upEKyylo4fS4t8is1FGflW3j2tC8rkpAKSwx_shHHQ3yIeyI07ha_hB8SrJoRWos6YZO_pUpfF2PQ4maawlLu4zd4_KvQrtMvjbtQL7OpsZpA8_KG1MMz3vzBEKJ1mskOvp4njcOHZC-HWbFJds-F1rwSf4qwBsQ57NAXKAegVBgxnTjCzCja7f2V6MnQyPGB5Aj3xiOMYrO6v2U-20g">
+                <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24">
+                <div class="max-w-3xl animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 mb-8 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20">
+                        <span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">About Imanova</span>
+                    </div>
+                    <h1 class="font-display text-5xl md:text-7xl leading-[1.1] text-on-surface mb-8">Co-creating resilient health systems for a healthier Africa</h1>
+                    <p class="font-body text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
+                        Imanova Systems partners with governments, research institutions, development organizations, and healthcare providers to co-create sustainable, interoperable, and data-driven health system solutions that improve decision-making and health outcomes.
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label font-bold hover:scale-105 transition-transform">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updated "Who We Are" Section: Four-Block Narrative Structure -->
+        <section class="py-24 space-y-32">
+            <!-- Block 1 – Introduction -->
+            <div class="px-6 md:px-12 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-fade-in-up">
+                        <div class="inline-flex items-center gap-2 mb-6 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20">
+                            <span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Block 1 — Introduction</span>
+                        </div>
+                        <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-8">Who We Are</h2>
+                        <p class="font-body text-xl text-on-surface-variant leading-relaxed">
+                            Imanova Systems is a health systems innovation firm committed to strengthening health systems and improving health outcomes across Africa. We partner with governments, research institutions, development partners, and healthcare organizations to co-create sustainable, interoperable, and data-driven digital solutions that enable better decisions and healthier communities.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center animate-fade-in-up delay-100">
+                        <div class="relative w-full max-w-md aspect-square flex items-center justify-center">
+                            <div class="absolute inset-0 bg-primary/5 rounded-full scale-110 blur-3xl"></div>
+                            <svg class="w-full h-auto relative text-primary/40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M110.1,28.1c-1.3-1.4-2.8-2.6-4.4-3.7l-4.4,1.4l-1.3,3.9l-2.1,0.6c-1.1-1.3-2.3-2.6-3.4-3.9l-3.3-1.6l-2.9,3.1l-2.5-0.1 c-1.2-1.8-2.4-3.5-3.6-5.3l-5.6,0.5l-0.7,4.5l-2.5,1.2c-0.3-2.1-0.6-4.2-0.9-6.3L67.1,22l1,4.4l-2.4,1.7 c0.7-2-1.3-4.1-2-6.1l-5.7,0.8l2,4l-2.1,2.1c0.1-2.1-0.3-4.2-0.4-6.3l-4.4,2.5l2.6,3.6l-2,2.4c0.1-2.1-0.3-4.2-0.4-6.3l-2.3,1.3 l-2.6-0.3c0,0.1,0,0.1,0,0.2c-0.7,1.8-1.3,3.7-2,5.5l-2.4-0.1l-2.3,3.7l-1.3-1c-1.2,1.7-2.3,3.3-3.5,5l1.6,3.6l-2.3,1.4 c-0.8,1.6-1.5,3.2-2.3,4.8l2.9,2.4l-1.2,3.3c-1.2,1.4-2.4,2.8-3.6,4.2l3.4,1.4l-0.4,4.5c-0.1,2.2-0.1,4.4-0.2,6.6l3,2.3L40,94.3 c-0.1,2.1-0.2,4.3-0.4,6.4l2.5,2.9l-1.6,4.2c-0.2,2.1-0.4,4.2-0.6,6.3l4,1.5l0.1,4.5c0.1,2.2,0.1,4.3,0.2,6.5l3,3l1.8,4.1 c1.2,1.8,2.4,3.5,3.6,5.3l1,4.4l3.1,3.3c1.3,1.5,2.6,3,3.9,4.4l2.1,3.9l4.3,1.8c1.3,1.8,2.5,3.5,3.8,5.3l3.5,2.8l4.1,2 c1.9,1.1,3.7,2.2,5.6,3.3l4.2,1l3,3.8l2.1,0.2c1.7,1.2,3.3,2.4,5,3.6l4.2-0.8l3.1,3.3c1.7,1,3.4,2,5.1,3l2.8-1.5l4.3,1.6 c1,0.4,2.1,0.8,3.1,1.1c1.1-1.3,2.2-2.7,3.3-4.1l1-4.4l3.3-3.1c0.1-2.2,0.2-4.4,0.3-6.6l2.3-3.8l1.7-4.2c0-2.2-0.1-4.4-0.1-6.6 l-0.7-4.5l2-4.1c-0.1-2.2-0.3-4.3-0.4-6.5l0.3-4.5l3.2-3.2c-0.2-2.1-0.4-4.2-0.6-6.4l1.6-4.2l2.3-3.8c-0.2-2.1-0.5-4.2-0.7-6.3 L144,91l1-4.4c-0.2-2.1-0.4-4.2-0.6-6.4l2.3-3.8l-1.3-4.3c-0.2-2.1-0.4-4.2-0.6-6.3l1.3-4.3l-2.4-3.8c-0.1-2.1-0.2-4.3-0.4-6.4 l-0.1-4.5l-3.3-3.1c-0.3-2.1-0.6-4.2-0.8-6.3l-1.6-4.2l-3.8-2.3c-0.3-2-0.7-4.1-1-6.1l-2.6-3.6l-4.4-0.9c-0.3-2-0.6-4-0.8-6l-3.6-2.6 l-4.3-1.4c-1.3-1.6-2.6-3.1-3.9-4.7l-4.5-0.1L110.1,28.1z" fill="currentColor" opacity="0.8"></path>
+                                <g class="text-primary">
+                                    <circle cx="100" cy="80" r="3" fill="currentColor"></circle>
+                                    <circle cx="120" cy="110" r="2.5" fill="currentColor"></circle>
+                                    <circle cx="80" cy="130" r="2.5" fill="currentColor"></circle>
+                                    <circle cx="60" cy="70" r="2.5" fill="currentColor"></circle>
+                                    <circle cx="140" cy="60" r="2" fill="currentColor"></circle>
+                                    <line x1="100" y1="80" x2="120" y2="110" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"></line>
+                                    <line x1="100" y1="80" x2="80" y2="130" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"></line>
+                                    <line x1="80" y1="130" x2="120" y2="110" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"></line>
+                                    <line x1="60" y1="70" x2="100" y2="80" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"></line>
+                                    <line x1="120" y1="110" x2="140" y2="60" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"></line>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 2 – Our Philosophy -->
+            <div class="bg-surface-container-low py-32">
+                <div class="px-6 md:px-12 max-w-7xl mx-auto">
+                    <div class="text-center mb-20 animate-fade-in-up">
+                        <div class="inline-flex items-center gap-2 mb-6 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20">
+                            <span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Block 2 — Philosophy</span>
+                        </div>
+                        <h2 class="font-display text-4xl md:text-6xl text-on-surface mb-6">Technology alone does not transform health systems.</h2>
+                        <p class="font-body text-xl text-on-surface-variant max-w-3xl mx-auto">Sustainable transformation is anchored in interconnected pillars that ensure systems are built to last and serve people.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-stretch">
+                        <div class="flex flex-col items-center p-8 bg-surface rounded-2xl border border-outline-variant hover:border-primary transition-all group animate-fade-in-up">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform">handshake</span>
+                            <h3 class="font-display text-xl mb-2">Partnership</h3>
+                            <div class="w-full h-px bg-outline-variant my-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center p-8 bg-surface rounded-2xl border border-outline-variant hover:border-primary transition-all group animate-fade-in-up delay-100">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform">home_pin</span>
+                            <h3 class="font-display text-xl mb-2">Local ownership</h3>
+                            <div class="w-full h-px bg-outline-variant my-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center p-8 bg-surface rounded-2xl border border-outline-variant hover:border-primary transition-all group animate-fade-in-up delay-200">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform">sync_alt</span>
+                            <h3 class="font-display text-xl mb-2">Interoperability</h3>
+                            <div class="w-full h-px bg-outline-variant my-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center p-8 bg-surface rounded-2xl border border-outline-variant hover:border-primary transition-all group animate-fade-in-up delay-300">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform">model_training</span>
+                            <h3 class="font-display text-xl mb-2">Capacity strengthening</h3>
+                            <div class="w-full h-px bg-outline-variant my-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center p-8 bg-surface rounded-2xl border border-outline-variant hover:border-primary transition-all group animate-fade-in-up delay-400">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform">all_inclusive</span>
+                            <h3 class="font-display text-xl mb-2">Long-term sustainability</h3>
+                            <div class="w-full h-px bg-outline-variant my-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 3 – How We Work -->
+            <div class="px-6 md:px-12 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-7 animate-fade-in-up">
+                        <img alt="Collaborative ecosystem diagram" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLspux56D4Q6FYco4d2eQodWFac-iqG1McMUYOqcgSwYoKgAvCr4Fy9edGGpCgpfGrb7w90_qEt6PpAwyix_dBoatlTar8aiGSRMxtmFgbpwfMXfrRXUNtPpTGh_gOWUbodSJh6G2tI497Y3SJVd8d2zTUGp7o4lV_wfAYbg1AxBQerN344dQvumpJnk6wWwXNsdAk5mgdKWrTjdhX5-I4XPfUOr4SepYqR-e3-TtAzDBJeFWnRFtzaJ">
+                    </div>
+                    <div class="lg:col-span-5 animate-fade-in-up delay-200">
+                        <div class="inline-flex items-center gap-2 mb-6 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20">
+                            <span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Block 3 — How We Work</span>
+                        </div>
+                        <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-8">Co-designing for Impact</h2>
+                        <p class="font-body text-xl text-on-surface-variant leading-relaxed mb-6">
+                            We don’t believe in off-the-shelf software for bespoke challenges. Our collaborative approach ensures we understand local pain points before designing a single line of code.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">1</span>
+                                <p class="text-on-surface-variant">Deep immersion to understand health system challenges.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">2</span>
+                                <p class="text-on-surface-variant">Iterative co-design alongside frontline health workers and policy makers.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">3</span>
+                                <p class="text-on-surface-variant">Building for seamless adoption and indigenous ownership.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 4 – Our Expertise -->
+            <div class="bg-surface py-32 border-t border-outline-variant/30">
+                <div class="px-6 md:px-12 max-w-7xl mx-auto">
+                    <div class="text-center mb-20 animate-fade-in-up">
+                        <div class="inline-flex items-center gap-2 mb-6 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full border border-primary/20">
+                            <span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Our Expertise</span>
+                        </div>
+                        <h2 class="font-display text-4xl md:text-6xl text-on-surface mb-6">Multidisciplinary Excellence</h2>
+                        <p class="font-body text-xl text-on-surface-variant max-w-3xl mx-auto mb-12">Our multidisciplinary team brings together expertise across public health, medicine, epidemiology, health information systems, health informatics, data science, artificial intelligence, geographic information systems (GIS), statistics, software engineering, and research. By combining technical excellence with deep health systems knowledge, we develop practical, scientifically rigorous solutions that meet real-world needs and create lasting impact.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-fade-in-up">
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Public Health</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Medicine</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Epidemiology</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">HIS</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Health Informatics</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Data Science</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">AI</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">GIS</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Statistics</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Software Engineering</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-lowest hover:bg-primary-fixed transition-colors text-center">
+                            <p class="font-label text-sm font-bold tracking-wide text-on-surface">Research</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-16 font-display text-2xl text-on-surface-variant max-w-4xl mx-auto italic">
+                        "We bridge public health and technology to deliver context-specific solutions that save lives and strengthen communities."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Our Brand Framework -->
+        <section class="px-6 md:px-12 py-32 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 animate-fade-in-up">
+                    <h2 class="font-display text-4xl md:text-6xl text-on-surface mb-6">Our Brand Framework</h2>
+                    <p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto">The foundation of our commitment to African health systems.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Mission -->
+                    <div class="group bg-surface-container-low p-8 rounded-2xl border border-outline-variant transition-all hover:-translate-y-2 hover:shadow-xl hover:border-primary animate-fade-in-up delay-100">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </div>
+                        <h3 class="font-display text-2xl mb-4">Our Mission</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">To co-create resilient, sustainable health systems through collaborative innovation and digital transformation, empowering evidence-driven decisions that improve health outcomes across Africa.</p>
+                    </div>
+                    <!-- Vision -->
+                    <div class="group bg-surface-container-low p-8 rounded-2xl border border-outline-variant transition-all hover:-translate-y-2 hover:shadow-xl hover:border-primary animate-fade-in-up delay-200">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </div>
+                        <h3 class="font-display text-2xl mb-4">Our Vision</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">A future where every African country has the data and technology infrastructure to make informed, timely health decisions that leave no one behind.</p>
+                    </div>
+                    <!-- Purpose -->
+                    <div class="group bg-surface-container-low p-8 rounded-2xl border border-outline-variant transition-all hover:-translate-y-2 hover:shadow-xl hover:border-primary animate-fade-in-up delay-300">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">psychology</span>
+                        </div>
+                        <h3 class="font-display text-2xl mb-4">Our Purpose</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">To bridge the gap between complex health challenges and sustainable digital solutions through technical excellence and pan-African partnership.</p>
+                    </div>
+                    <!-- Promise -->
+                    <div class="group bg-primary text-on-primary p-8 rounded-2xl border border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-fade-in-up delay-400">
+                        <div class="w-12 h-12 bg-on-primary/10 rounded-full flex items-center justify-center mb-6 text-on-primary">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <h3 class="font-display text-2xl mb-4">The Imanova Promise</h3>
+                        <p class="opacity-90 text-sm leading-relaxed">We promise precision in our data, resilience in our systems, and authority in our insights, ensuring every partnership results in measurable impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Imanova Way -->
+        <section class="px-6 md:px-12 py-32 bg-surface-container-highest/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-20">
+                    <div class="lg:col-span-5 animate-fade-in-up">
+                        <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-8">The Imanova Way</h2>
+                        <p class="font-body text-xl text-on-surface-variant leading-relaxed">
+                            Our work is guided by a core set of principles that define how we build partnerships, design solutions, and foster a culture of excellence within our team. These are not just words; they are the blueprint for our collective impact.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all group animate-fade-in-up">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <h4 class="font-display text-2xl mb-4 text-on-surface">Co-create</h4>
+                        <p class="text-on-surface-variant leading-relaxed">We build solutions with our partners—not for them—ensuring ownership, relevance, and long-term sustainability.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all group animate-fade-in-up delay-100">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                        </div>
+                        <h4 class="font-display text-2xl mb-4 text-on-surface">Innovate</h4>
+                        <p class="text-on-surface-variant leading-relaxed">We combine science, technology, and creativity to solve complex health system challenges.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all group animate-fade-in-up delay-200">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">all_inclusive</span>
+                        </div>
+                        <h4 class="font-display text-2xl mb-4 text-on-surface">Sustain</h4>
+                        <p class="text-on-surface-variant leading-relaxed">We design resilient, interoperable systems that continue delivering value long after implementation.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all group animate-fade-in-up delay-300">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <h4 class="font-display text-2xl mb-4 text-on-surface">Empower</h4>
+                        <p class="text-on-surface-variant leading-relaxed">We strengthen institutions through capacity building, mentorship, and knowledge transfer.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all group animate-fade-in-up delay-400">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <h4 class="font-display text-2xl mb-4 text-on-surface">Excel</h4>
+                        <p class="text-on-surface-variant leading-relaxed">We pursue scientific rigor, technical excellence, and continuous improvement in everything we do.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all group animate-fade-in-up delay-500">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">gavel</span>
+                        </div>
+                        <h4 class="font-display text-2xl mb-4 text-on-surface">Serve with Integrity</h4>
+                        <p class="text-on-surface-variant leading-relaxed">We uphold transparency, accountability, ethical practice, and respect for the communities we serve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing CTA Section -->
+        <section class="px-6 md:px-12 py-32 bg-surface">
+            <div class="max-w-7xl mx-auto bg-on-surface text-surface-bright rounded-3xl p-12 md:p-28 relative overflow-hidden text-center shadow-2xl">
+                <div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay">
+                    <img alt="Data network pattern" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_DF6Ecj7cnH6GP1uGGapO-iUKTBOr-5oYopyucukXlOUg3oXrKv2YpU748t0yDJEFPq18PT0KUxuSlRAPJ3GW_SSsFsiwNAXyPCs0uLwjtvxGvpqdNysb83eRAeCyUz_sVpu2TNKmPJqnUdSouFdpv3ZJAHfgjp6jkpK6gaN1zKEyv9Xw1_ERljf9vrWz_ASMfh70l_fNdtatK840TYuQtuDD2LGEwoxceL45QOngwtJ5M_PYjcNR4vaatDa0KFrVGCNn3GerOA">
+                </div>
+                <div class="relative z-10 max-w-2xl mx-auto space-y-10 animate-fade-in-up">
+                    <h2 class="font-display text-4xl md:text-6xl leading-[1.1]">Let's Build the Future of African Health Together</h2>
+                    <p class="font-body text-xl opacity-80 leading-relaxed">Every health system is unique. Every partnership is collaborative. Every solution is designed to strengthen the decisions that improve lives.</p>
+                    <div class="pt-6 flex flex-col sm:flex-row gap-5 justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-lg font-label font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                            Let's Build Together
+                        </button>
+                        <button class="bg-transparent border border-surface-bright/30 text-surface-bright px-12 py-5 rounded-lg font-label font-bold hover:bg-surface-bright/10 transition-colors">
+                            Book a Consultation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1 lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-3">
+                        <img alt="Imanova Logo" class="h-8 w-auto grayscale brightness-50" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiIGZpbGw9IiNlOGVhZWQiLz48cGF0aCBkPSJNMTcwIDEzMCBsMzAgNDAgbDIwLTE1IGw0MCA1NSBIMTQweiIgZmlsbD0iI2JkYzFjNiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEyMCIgcj0iMTgiIGZpbGw9IiNiZGMxYzYiLz48L3N2Zz4=">
+                        <span class="font-display text-2xl font-bold text-on-surface">Imanova Systems Ltd</span>
+                    </div>
+                    <div class="flex gap-5">
+                        <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+                        <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+                        <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <p class="font-label text-[11px] uppercase font-bold tracking-[0.2em] text-on-surface">Solutions</p>
+                    <ul class="space-y-4 font-body text-sm text-on-surface-variant">
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Health Systems Audit</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Custom Information Systems</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">DHIS2 Integration</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Data Analytics</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Capacity Building</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <p class="font-label text-[11px] uppercase font-bold tracking-[0.2em] text-on-surface">Company</p>
+                    <ul class="space-y-4 font-body text-sm text-on-surface-variant">
+                        <li class=""><a class="hover:text-primary transition-colors font-bold text-primary" href="#">About Us</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Nairobi Hub</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Privacy Governance</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="font-label text-[11px] text-on-surface-variant/70 uppercase tracking-widest font-medium">© 2026 Imanova Systems Ltd. Precise. Resilient. Authoritative.</p>
+                <div class="flex gap-10">
+                    <a class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors font-bold" href="#">LinkedIn</a>
+                    <a class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors font-bold" href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => observer.observe(el));
+
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2', 'shadow-sm', 'bg-surface/95');
+                header.classList.remove('py-4', 'bg-surface/80');
+            } else {
+                header.classList.remove('py-2', 'shadow-sm', 'bg-surface/95');
+                header.classList.add('py-4', 'bg-surface/80');
+            }
+        });
+    </script>
+
+</body></html>
