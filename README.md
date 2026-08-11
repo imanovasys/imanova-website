@@ -9,7 +9,7 @@ A Next.js (App Router) rewrite of the Stitch-designed Imanova Systems site, buil
 - `/our-services/` — Our Services
 - `/our-approach/` — Our Approach
 - `/resources/` — Resources and Documentation
-- `/contact-us/` — Contact Us (working contact form, sends email via Resend)
+- `/contact-us/` — Contact Us (working contact form, sends email via Zoho SMTP)
 
 All pages share a `Header`/`Footer` and the "Sahara" warm-minimalism theme (the Resources page was originally a different, inconsistent design and has been restyled to match).
 
@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-Visit http://localhost:3000. The contact form needs `RESEND_API_KEY` set (see below) to actually send email in dev — without it, submitting shows a clear "email service is not configured" error instead of failing silently.
+Visit http://localhost:3000. The contact form needs `ZOHO_SMTP_USER` / `ZOHO_SMTP_PASSWORD` set (see below) to actually send email in dev — without them, submitting shows a clear "email service is not configured" error instead of failing silently. Copy `.env.example` to `.env.local` and fill in real values for local testing.
 
 ## Build
 
@@ -43,18 +43,22 @@ Security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`
 
 ### Contact form → info@imanovasys.com
 
-The Contact Us page posts to `app/api/contact/route.ts`, a Next.js API route that sends email through **Resend**.
+The Contact Us page posts to `app/api/contact/route.ts`, a Next.js API route that sends email by connecting directly to **Zoho Mail's SMTP server** (via `nodemailer`) as `info@imanovasys.com` — no third-party email API or account needed beyond Zoho itself.
 
 Setup:
 
-1. Create a free account at https://resend.com.
-2. Get an API key (Dashboard → API Keys) and add it to Vercel: Project Settings → Environment Variables → `RESEND_API_KEY`.
-3. **Sender restriction to know about**: the route currently sends `from` Resend's shared testing address (`onboarding@resend.dev`), which only reliably delivers to the email address your Resend account was signed up with. For production delivery to `info@imanovasys.com`:
-   - In Resend, go to Domains → Add Domain → add `imanovasys.com`, then add the DNS records Resend gives you (TXT/CNAME, at your domain registrar).
-   - Once verified, change `FROM_ADDRESS` in `app/api/contact/route.ts` to something like `"Imanova Systems <contact@imanovasys.com>"`.
-4. Redeploy after adding the environment variable — Vercel doesn't pick up new env vars on already-running deployments.
+1. In Zoho Mail, go to Settings → Security → App Passwords, and generate an app-specific password for `info@imanovasys.com` (don't use the account's normal login password — Zoho requires an app password for SMTP access, and it's revocable independently of the login password).
+2. In Vercel: Project Settings → Environment Variables, add:
+   - `ZOHO_SMTP_USER` = `info@imanovasys.com`
+   - `ZOHO_SMTP_PASSWORD` = the app password from step 1
+   - `ZOHO_SMTP_HOST` — only needed if your Zoho account isn't on the default `.com` data center (use `smtp.zoho.eu`, `smtp.zoho.in`, etc. to match where your Zoho account was created).
+3. Redeploy after adding the environment variables — Vercel doesn't pick up new env vars on already-running deployments.
 
-The route also does basic server-side validation (required fields, email format) and a honeypot check (a hidden `bot-field` input humans never fill in) before sending.
+The route also does basic server-side validation (required fields, email format) and a honeypot check (a hidden `bot-field` input humans never fill in) before sending. The message is sent from and to the same `info@imanovasys.com` mailbox, with `replyTo` set to whatever email the visitor entered, so replying from your inbox goes straight back to them.
+
+## Fonts
+
+EB Garamond and Manrope are self-hosted as local variable font files (`app/fonts/`, loaded via `next/font/local`) rather than fetched from Google Fonts at build time. That's a deliberate choice, not a style preference: `next/font/google`'s build-time fetch crashed on Vercel with `TypeError: Cannot read properties of null (reading '1')`, a fragility in fetching Google's font CSS during the build. Self-hosting removes the network dependency entirely.
 
 ## Logo
 

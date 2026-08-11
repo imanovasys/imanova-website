@@ -1,13 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 import { siteConfig } from "@/lib/site";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Resend's shared sender only delivers to the email address the Resend
-// account was signed up with. For real delivery to siteConfig.email,
-// verify the imanovasys.com domain in Resend and change this to an
-// address on that domain (e.g. "Imanova Systems <contact@imanovasys.com>").
-const FROM_ADDRESS = `${siteConfig.name} Website <onboarding@resend.dev>`;
 
 type ContactPayload = {
   name?: string;
@@ -18,10 +13,26 @@ type ContactPayload = {
   "bot-field"?: string;
 };
 
+function getTransporter() {
+  const user = process.env.ZOHO_SMTP_USER;
+  const pass = process.env.ZOHO_SMTP_PASSWORD;
+  if (!user || !pass) return null;
+
+  // Zoho's SMTP host differs by data center: smtp.zoho.com (global/US),
+  // smtp.zoho.eu, smtp.zoho.in, etc. Override via ZOHO_SMTP_HOST if your
+  // Zoho Mail account isn't on the default .com data center.
+  return nodemailer.createTransport({
+    host: process.env.ZOHO_SMTP_HOST || "smtp.zoho.com",
+    port: 465,
+    secure: true,
+    auth: { user, pass },
+  });
+}
+
 export async function POST(request: NextRequest) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("RESEND_API_KEY is not set.");
+  const transporter = getTransporter();
+  if (!transporter) {
+    console.error("ZOHO_SMTP_USER / ZOHO_SMTP_PASSWORD are not set.");
     return NextResponse.json(
       { error: "Email service is not configured yet. Please try again later." },
       { status: 500 },
@@ -69,28 +80,13 @@ export async function POST(request: NextRequest) {
   ].filter((line): line is string => line !== null);
 
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: FROM_ADDRESS,
-        to: [siteConfig.email],
-        reply_to: email,
-        subject: `New contact form message from ${name}`,
-        text: textLines.join("\n"),
-      }),
+    await transporter.sendMail({
+      from: `"${siteConfig.name} Website" <${process.env.ZOHO_SMTP_USER}>`,
+      to: siteConfig.email,
+      replyTo: email,
+      subject: `New contact form message from ${name}`,
+      text: textLines.join("\n"),
     });
-
-    if (!res.ok) {
-      console.error("Resend API error:", res.status, await res.text());
-      return NextResponse.json(
-        { error: "Failed to send your message. Please try again." },
-        { status: 502 },
-      );
-    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
