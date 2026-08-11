@@ -47,7 +47,7 @@ The Contact Us page posts to `app/api/contact/route.ts`, a Next.js API route tha
 
 Setup:
 
-1. In Zoho Mail, go to Settings → Security → App Passwords, and generate an app-specific password for `info@imanovasys.com` (don't use the account's normal login password — Zoho requires an app password for SMTP access, and it's revocable independently of the login password).
+1. App passwords live in the **Zoho Accounts** panel, not Zoho Mail's own settings: sign in at https://accounts.zoho.com as `info@imanovasys.com`, go to **Security** → **Application-Specific Passwords**, and generate one (name it something like "Website Contact Form"). Don't use the account's normal login password — the app password is revocable independently and is what SMTP access requires. Copy it immediately; Zoho only shows it once.
 2. In Vercel: Project Settings → Environment Variables, add:
    - `ZOHO_SMTP_USER` = `info@imanovasys.com`
    - `ZOHO_SMTP_PASSWORD` = the app password from step 1
