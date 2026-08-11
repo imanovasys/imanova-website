@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/lib/site";
 
-const ebGaramond = EB_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+// Self-hosted (not next/font/google): the Google Fonts build-time fetch
+// crashed on Vercel ("TypeError: Cannot read properties of null (reading
+// '1')" in @next/font's loader) — a known fragility in fetching Google
+// Fonts CSS during the build. Bundling the variable font files directly
+// removes that network dependency entirely.
+const ebGaramond = localFont({
+  src: "./fonts/EBGaramond-Variable.ttf",
+  weight: "400 800",
   variable: "--font-display",
   display: "swap",
 });
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const manrope = localFont({
+  src: "./fonts/Manrope-Variable.ttf",
+  weight: "200 800",
   variable: "--font-body",
   display: "swap",
 });
